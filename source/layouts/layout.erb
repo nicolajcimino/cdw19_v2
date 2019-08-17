@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html
+xmlns="http://www.w3.org/1999/xhtml"
 xmlns:og="http://ogp.me/ns#"
 xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
@@ -11,7 +12,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
     <meta name="description" content="">
 
     <meta property="fb:app_id" content="1770883143200050"/>
-    <meta property="og:title" content="Cincinnati Design Week 2019 | September 17 - September 21 | Presented by AIGA Cincinnati"/>
+    <meta property="og:title" content="Cincinnati Design Week 2019 | September 23 - September 27 | Presented by AIGA Cincinnati"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="http://cincinnatidesignweek.com"/>
     <meta property="og:site_name" content="Cincinnati Design Week Presented by AIGA Cincinnati"/>
@@ -28,6 +29,8 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
     <%= favicon_tag 'apple-touch-icon-114x114-precomposed.png', rel: 'apple-touch-icon-precomposed', size: '114x114' %>
 
     <%= stylesheet_link_tag "application" %>
+    <!-- bootstrap css -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
   <body class="<%= page_classes %>">
@@ -35,7 +38,13 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
     <div class="bodycontent">
       <%= yield %>
     </div>
+    <div style="background: #fff;">
+    <div class="container">
     <%= partial "footer" %>
+    </div>
+    </div>
     <%= javascript_include_tag "application" %>
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
