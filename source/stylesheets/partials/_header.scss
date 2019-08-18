@@ -7,7 +7,9 @@ header {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	z-index: +2;
-	border: 15px solid $black;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+	// border: 15px solid $black;
 	.logo_small {
 		@include hide-text;
 		// width: 178px;
@@ -42,7 +44,7 @@ header {
 		top: 10px;
 		left: 5%;
 		padding: 5px;
-		font-family: $font-narrow;
+		font-family: $font-sans;
 		color: $black;
 		@include font-size(13);
 		&::before {
@@ -85,7 +87,7 @@ header {
 					}
 					a {
 						display: block;
-						@include font-narrow;
+						@include font-sans;
 						color: $black;
 						@include font-size(18);
 						font-weight: bold;
