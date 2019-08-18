@@ -1,4 +1,10 @@
 footer {
-	margin: 60px 0 0;
+	padding: 30px;
 	text-align: center;
+	background: $blue-dk;
+	p{
+	color: $white;
+	width: 75%;
+	margin: 0 auto;
+	}
 }
