@@ -30,7 +30,7 @@ header {
 			top: 17px;
 		}
 		@include respond-to(medium) {
-			top: -50px;
+			top: 25px;
 			left: 5%;
 			margin-left: 0;
 			&.active {
@@ -87,14 +87,14 @@ header {
 					}
 					a {
 						display: block;
-						@include font-sans;
-						color: $black;
-						@include font-size(18);
-						font-weight: bold;
-						padding: 5px 15px;
+						@include font-futura-bold;
+						@include font-size(16);
+						color: $blue-dk;
+
+						padding: 10px 15px 8px;
 						&:hover {
-							background: $black;
-							color: $white;
+							background: $blue-dk;
+							color: $yellow-lt;
 						}
 					}
 				}
@@ -123,10 +123,10 @@ header {
 						text-transform: none;
 						@include font-size(15);
 						padding: 5px;
-						color: $black;
+						color: $blue-dk;
 						&:hover {
-							background: $black;
-							color: $white;
+							background: $blue-dk;
+							color: $yellow-lt;
 						}
 					}
 				}

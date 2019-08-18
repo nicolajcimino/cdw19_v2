@@ -3,12 +3,12 @@
 $(document).ready(function(){
 
 	// RANDOM LOGO
-	var description = [
-	  "images/logo-cdw-1.svg",
-	  "images/logo-cdw-2.svg",
-	  "images/logo-cdw-3.svg",
-	  "images/logo-cdw-4.svg"
-	];
+	// var description = [
+	//   "images/logo-cdw-1.svg",
+	//   "images/logo-cdw-2.svg",
+	//   "images/logo-cdw-3.svg",
+	//   "images/logo-cdw-4.svg"
+	// ];
 
 	var size = description.length
 	var x = Math.floor(size*Math.random())
@@ -48,17 +48,17 @@ $(document).ready(function(){
 	});
 
 	// SCROLL FUNCTIONS
-	$(window).scroll(function() {
-
-		var leadinoffset = $(".leadin").offset();
-		var scrollpos = $(window).scrollTop();
-
-		if (scrollpos >= leadinoffset.top) {
-		  $('.logo_small').addClass("active");
-		} else {
-		  $('.logo_small').removeClass("active");
-		}
-
-	});
-
-});
+// 	$(window).scroll(function() {
+//
+// 		var leadinoffset = $(".leadin").offset();
+// 		var scrollpos = $(window).scrollTop();
+//
+// 		if (scrollpos >= leadinoffset.top) {
+// 		  $('.logo_small').addClass("active");
+// 		} else {
+// 		  $('.logo_small').removeClass("active");
+// 		}
+//
+// 	});
+//
+// });
