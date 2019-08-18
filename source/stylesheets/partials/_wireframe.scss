@@ -20,18 +20,6 @@ body {
   background: image-url("1x/bgdot-25.png") top left repeat;
   background-attachment: fixed;
   background-position: top left;
-  /**
-  background-image: image-url("1x/bgdot-100.png");
-  background-size: auto, cover;
-  background-repeat: repeat;
-  border: none;
-  //@include respond-to(xlarge) {
-  //  border: 15px solid $black;
-  //}
-  //.no-svg & {
-  //  background-image: image-url("1x/bgdot-100.png");
-  //}
-  **/
 }
 
 img {
@@ -102,5 +90,4 @@ section {
   position: relative;
   padding-top: 70px;
   @include box-shadow(rgba($black, .1) 0 0 7px);
-  border: 15px solid $black;
 }

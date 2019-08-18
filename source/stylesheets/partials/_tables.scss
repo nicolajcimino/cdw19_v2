@@ -6,7 +6,7 @@ table {
     th {
       padding: 10px;
       text-align: center;
-      @include font-narrow;
+      @include font-sans;
       @include font-size(22);
     }
   }
@@ -36,7 +36,7 @@ table {
           width: auto;
           border-right: none;
           border-bottom: none;
-          font-family: $font-narrow;
+          font-family: $font-sans;
           @include font-size(20);
         }
         &:last-child {

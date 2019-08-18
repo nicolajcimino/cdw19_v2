@@ -1,9 +1,34 @@
+$font-futura: 'futura-pt', sans-serif;
+$font-futura-bold: 'futura-pt-bold', sans-serif;
 $font-sans: 'Lato', sans-serif;
-$font-narrow: 'Lato', sans-serif;
 
-@mixin font-narrow {
-  font-family: $font-narrow;
-  text-transform: uppercase;
+@mixin font-futura {
+  font-family: $font-futura;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-futura-italic {
+  font-family: $font-futura;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-futura-bold {
+  font-family: $font-futura-bold;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-futura-bold-italic {
+  font-family: $font-futura-bold;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin font-sans {
+  font-family: $font-sans;
+  font-style: normal;
 }
 
 @mixin font-social {
@@ -16,68 +41,138 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  @include font-sans;
   @include font-size(16);
+  font-weight: 400;
   color: $black;
+  text-align: left;
 }
 
 p {
-	padding: 7px 0 12px;
+  @include font-sans;
+  @include font-size(16);
+  font-weight: 400;
+	padding: 8px 0 12px;
   color: $black;
   &.leadin {
-    @include font-size(20);
+    @include font-size(18);
     text-align: left;
+  }
+  &.small {
+    @include font-size(13);
   }
 }
 
 a {
 	text-decoration: none;
   @include animate-object;
-  color: #FF5B35;
-  font-weight: bold;
+  color: $red-dk;
+  font-weight: 700;
   &:hover {
-    background-color: #FF5B35;
+    background-color: $red-dk;
     color: $white;
+    text-decoration: none;
   }
   &:active {
     position: relative;
     top: 1px;
   }
+  &.button-a {
+    @include box-sizing(border-box);
+    @include font-sans;
+    @include font-size(18);
+    color: $white;
+    background-color: $blue-dk;
+    padding: .5em 1.5em;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    margin: 8px 0 16px;
+    &:hover {
+      background-color: $blue-md;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    }
+    /**@include respond-to(xsmall) {
+      display: inline-block;
+    }**/
+  }
+  // &.button-a-colorme {
+  //   @include box-sizing(border-box);
+  //   @include font-sans;
+  //   @include font-size(18);
+  //   color: $white;
+  //   border-radius: 8px;
+  //   display: inline-block;
+  //   text-align: center;
+  //   margin: 8px 0 16px;
+  //   & > div{
+  //     width: 100%;
+  //     height: 100%;
+  //     min-width: 100%;
+  //     border-radius: 8px;
+  //     padding: .5em 1.5em;
+  //   }
+  //   &:hover > div {
+  //     background-color:rgba(255, 255, 255, 0.1);
+  //   }
+  //   &:hover {
+  //     box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+  //   }
+  //   /**@include respond-to(xsmall) {
+  //     display: inline-block;
+  //   }**/
+  // }
+  &.button-b {
+    @include box-sizing(border-box);
+    @include font-sans;
+    @include font-size(16);
+    color: $white;
+    //background-color: $red-dk;
+    padding: .25em .75em;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+      background-color: $yellow-dk;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+    }
+    /**@include respond-to(xsmall) {
+      display: inline-block;
+    }**/
+  }
 }
 
-strong {
-  font-weight: bold;
+strong, b, .text-bold {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-futura-bold;
 }
 
 h1 {
-	@include font-size(30);
-  // min-height: 147px;
-  padding: 15px 0;
-  text-align: center;
-  color: $black;
-  text-transform: uppercase;
-  font-weight: bold;
+	@include font-size(40);
+  letter-spacing:0.025em;
+  //padding: 15px 0;
 }
 
 h2 {
   @include font-size(28);
-  color: #00ADEE;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 15px 0;
-  .presenters &,
+  letter-spacing:0.025em;
+  //padding: 15px 0;
+  /**.presenters &,
   .keynote-presenter & {
     @include font-size(25);
     color: $black;
   }
   &.keynote {
     text-align: center;
-  }
+  }**/
 }
 
 h3 {
-  @include font-size(25);
-  .presenters & {
+  @include font-size(24);
+  /**.presenters & {
     @include font-size(17);
     color: #00ADEE;
     font-family: $font-sans;
@@ -97,19 +192,24 @@ h3 {
     color: #FF5B35;
     text-transform: uppercase;
     font-weight: bold;
-  }
+  }**/
 }
 
 h4 {
-  @include font-size(16);
+  @include font-size(18);
+  letter-spacing:0.015em;
 }
 
 h5 {
-  @include font-size(18);
-  font-weight: bold;
-  color: tint(#FF5B35, 25%);
-  margin-bottom: 10px;
+  @include font-size(16);
+  letter-spacing:0.008em;
+}
+h6 {
+  @include font-size(14);
+}
 
+.uppercase{
+  text-transform: uppercase;
 }
 
 .event{
@@ -134,23 +234,7 @@ h5 {
   }
 }
 
-.button {
-  @include box-sizing(border-box);
-  @include font-narrow;
-  @include font-size(23);
-  color: $white;
-  background-color: #FF5B35;
-  padding: 5px 10px;
-  display: block;
-  text-align: center;
-  &:hover {
-    background-color: $white;
-    color: #FF5B35;
-  }
-  @include respond-to(xsmall) {
-    display: inline-block;
-  }
-}
+
 
 ul {
   li {
@@ -172,9 +256,9 @@ div.soldout{
   width: 100%;
   padding: 8px 8px;
   margin: 16px auto;
-  background: #FFB547;
+  background: $yellow-lt;
   p{
-    color: #000;
+    color: $black;
     text-transform: uppercase;
     text-align: center;
     padding: 0;
@@ -182,11 +266,11 @@ div.soldout{
     a{
       font-weight: normal;
       text-decoration: underline;
-      color: #000;
+      color: $black;
     }
     a:hover{
-      font-weight:bold;
-      background:none;
+      font-weight: 700;
+      background: none;
     }
   }
 }
