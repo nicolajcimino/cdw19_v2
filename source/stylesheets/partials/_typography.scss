@@ -151,48 +151,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	@include font-size(40);
-  letter-spacing:0.025em;
-  //padding: 15px 0;
+  @include font-size(32);
+  letter-spacing:0;
+  @include respond-to(small) {
+  	@include font-size(40);
+    letter-spacing:0.025em;
+    //padding: 15px 0;
+  }
 }
 
 h2 {
-  @include font-size(28);
-  letter-spacing:0.025em;
-  //padding: 15px 0;
-  /**.presenters &,
-  .keynote-presenter & {
-    @include font-size(25);
-    color: $black;
+  @include font-size(24);
+  @include respond-to(small) {
+    @include font-size(28);
+    letter-spacing:0.025em;
+    //padding: 15px 0;
+    /**.presenters &,
+    .keynote-presenter & {
+      @include font-size(25);
+      color: $black;
+    }
+    &.keynote {
+      text-align: center;
+    }**/
   }
-  &.keynote {
-    text-align: center;
-  }**/
 }
 
 h3 {
-  @include font-size(24);
-  /**.presenters & {
-    @include font-size(17);
-    color: #00ADEE;
-    font-family: $font-sans;
-    text-transform: none;
-  }
-  .keynote-presenter & {
-    @include font-size(20);
-    color: #00ADEE;
-    font-family: $font-sans;
-    text-transform: none;
+  @include font-size(20);
+  @include respond-to(small) {
+    @include font-size(24);
+    /**.presenters & {
+      @include font-size(17);
+      color: #00ADEE;
+      font-family: $font-sans;
+      text-transform: none;
+    }
+    .keynote-presenter & {
+      @include font-size(20);
+      color: #00ADEE;
+      font-family: $font-sans;
+      text-transform: none;
 
-  }
-  #partners & {
-    color: #00ADEE;
-  }
-  &.comingsoon {
-    color: #FF5B35;
-    text-transform: uppercase;
-    font-weight: bold;
-  }**/
+    }
+    #partners & {
+      color: #00ADEE;
+    }
+    &.comingsoon {
+      color: #FF5B35;
+      text-transform: uppercase;
+      font-weight: bold;
+    }**/
+}
 }
 
 h4 {
@@ -204,6 +214,7 @@ h5 {
   @include font-size(16);
   letter-spacing:0.008em;
 }
+
 h6 {
   @include font-size(14);
 }
