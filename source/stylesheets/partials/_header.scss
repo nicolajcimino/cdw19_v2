@@ -91,7 +91,8 @@ header {
 						@include font-futura-bold;
 						@include font-size(16);
 						color: $blue-dk;
-
+						text-transform: uppercase;
+						letter-spacing: .02em;
 						padding: 10px 15px 8px;
 						&:hover {
 							background: $blue-dk;
