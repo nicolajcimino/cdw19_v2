@@ -60,6 +60,7 @@ p {
   }
   &.small {
     @include font-size(13);
+    line-height: 1.6;
   }
 }
 

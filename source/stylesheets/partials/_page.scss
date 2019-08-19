@@ -38,26 +38,26 @@
 
 .schedule {
 	a {
-		color: $blue;
+		color: $blue-dk;
 		font-weight: bold;
 		&:hover {
-			background-color: $blue;
-			color: $white;
+			background-color: $blue-dk;
+			color: $yellow-lt;
 		}
-		&.ticket {
-			display: block;
-			color: $blue;
-			@include font-size(14);
-			margin-top: 5px;
-			&:after {
-				content: " ▶";
-				opacity: .5;
-			}
-			&:hover {
-				background-color: $blue;
-				color: $white;
-			}
-		}
+		// &.ticket {
+		// 	display: block;
+		// 	color: $blue;
+		// 	@include font-size(14);
+		// 	margin-top: 5px;
+		// 	&:after {
+		// 		content: " ▶";
+		// 		opacity: .5;
+		// 	}
+		// 	&:hover {
+		// 		background-color: $blue;
+		// 		color: $white;
+		// 	}
+		// }
 	}
 }
 

@@ -6,8 +6,9 @@ table {
     th {
       padding: 10px;
       text-align: center;
-      @include font-sans;
+      @include font-futura-bold;
       @include font-size(22);
+      color: $blue-md;
     }
   }
   tbody {
@@ -27,17 +28,19 @@ table {
         vertical-align: middle;
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid $light-grey;
-        padding: 15px;
+        // border-bottom: 1px solid $light-grey;
+        padding: 1em;
         @include box-sizing(border-box);
         &:first-child {
           text-align: left;
-          background: $light-grey;
+          background: $blue-dk;
+          color: $yellow-lt;
           width: auto;
           border-right: none;
           border-bottom: none;
-          font-family: $font-sans;
-          @include font-size(20);
+          @include font-futura-bold;
+          @include font-size(18);
+          text-transform: uppercase;
         }
         &:last-child {
           border-right: none;
@@ -59,9 +62,12 @@ table {
     tbody {
       tr {
         &:nth-child(even) {
-          background: $grey;
+          background: $blue-grey;
           td {
-            border-right: 1px solid $white;
+            border-right: 1px solid $blue-md;
+            &:last-child {
+              border-right: none;
+            }
             &:empty {
               padding: 15px;
             }
@@ -70,11 +76,12 @@ table {
         td {
           display: table-cell;
           width: 33%;
-          border-right: 1px solid $grey;
+          border-right: 1px solid $blue-md;
           border-bottom: none;
           &:first-child {
-            font-family: $font-sans;
+            @include font-futura-bold;
             @include font-size(16);
+            text-transform: uppercase;
           }
         }
       }
