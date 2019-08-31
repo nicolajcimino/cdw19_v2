@@ -91,3 +91,28 @@
 		}
 	}
 }
+
+#presentingpartner h2 {
+	text-align: center;
+	margin: 60px auto 0;
+}
+
+.presentingpartner {
+	text-align: center;
+	&:hover {
+		a {
+			opacity: .5;
+		}
+	}
+	li {
+		display: inline-block;
+		margin: 30px;
+		vertical-align: middle;
+		a {
+			&:hover {
+				background-color: $white;
+				opacity: 1;
+			}
+		}
+	}
+}
